@@ -5,11 +5,9 @@ public class FishingRod {
     private String name;
     private String brand;
     private String sport;
-    private int size;
     private int qty;
     private float price;
-
-
+    
     public FishingRod(){
     }
     public FishingRod(int id, String name, String brand, String sport, int qty, float price) {
