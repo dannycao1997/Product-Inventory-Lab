@@ -6,8 +6,8 @@ import models.FishingRod;
 import java.util.ArrayList;
 
 public class FishingRodService {
-    private static Integer nextId = 1; // (1)
-    private ArrayList<FishingRod> inventory = new ArrayList<>(); // (2)
+    private static Integer nextId = 1;
+    private ArrayList<FishingRod> inventory = new ArrayList<>();
 
     // (1)
     public FishingRod create(int id, String name, String brand, String sport, int Qty, float price) {
@@ -25,13 +25,11 @@ public class FishingRodService {
         return null;
     }
 
-    //read all
     public FishingRod[] findAll() {
         FishingRod[] rodarray = new FishingRod[inventory.size()];
         return inventory.toArray(rodarray);
     }
 
-    //delete
     public boolean delete(Integer id) {
         for (FishingRod fishrod : inventory){
             if (id.equals(fishrod.getId())){

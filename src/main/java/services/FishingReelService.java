@@ -6,16 +6,16 @@ import models.FishingRod;
 import java.util.ArrayList;
 
 public class FishingReelService {
-    private static Integer nextId = 1; // (1)
-    private ArrayList<FishingReel> inventory = new ArrayList<>(); // (2)
+    private static Integer nextId = 1;
+    private ArrayList<FishingReel> inventory = new ArrayList<>();
 
-    // (1)
+
     public FishingReel create(int Id, String name, String brand, String sport, int Qty, float price) {
         FishingReel createdFishingReel = new FishingReel(nextId++, name, brand, sport, Qty, price);
         inventory.add(createdFishingReel);
         return createdFishingReel;
     }
-    //read
+
     public FishingReel findFishingReel(int id) {
         for(FishingReel fishreel : inventory){
             if (id == fishreel.getId()){
@@ -25,7 +25,6 @@ public class FishingReelService {
         return null;
     }
 
-    //read all
     public FishingReel[] findAll() {
         FishingReel[] reelarray = new FishingReel[inventory.size()];
         return inventory.toArray(reelarray);    }
