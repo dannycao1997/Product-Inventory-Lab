@@ -9,14 +9,14 @@ public class FishingReelServiceTest {
     public void createTest() {
 
         // (1)
-        String expectedName = "Stan Smith";
-        String expectedBrand = "Adidas";
-        String expectedSport = "Tennis";
-        int expectedQty = 10;
-        float expectedPrice = 80.00f;
+        String expectedName = "Reel Deal";
+        String expectedBrand = "Danny's Fishing Company";
+        String expectedSport = "Fishing";
+        int expectedQty = 1000;
+        float expectedPrice = 100.00f;
 
         // (2)
-        FishingReelService fishingReelService= new FishingReelService();
+        FishingReelService fishingReelService = new FishingReelService();
         FishingReel testFishingReel = FishingReelService.create(expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
 
         // (3)

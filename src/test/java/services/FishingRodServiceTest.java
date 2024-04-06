@@ -1,6 +1,7 @@
 package services;
 
-import models.FishingReel;
+
+import models.FishingRod;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
@@ -9,15 +10,15 @@ public class FishingRodServiceTest {
     public void createTest() {
 
         // (1)
-        String expectedName = "Stan Smith";
-        String expectedBrand = "Adidas";
-        String expectedSport = "Tennis";
-        int expectedQty = 10;
-        float expectedPrice = 80.00f;
+        String expectedName = "Best Fishing Rod Ever";
+        String expectedBrand = "Danny's Fishing Company";
+        String expectedSport = "fishing";
+        int expectedQty = 300;
+        float expectedPrice = 150.00f;
 
         // (2)
-        FishingReelService fishingRodService = new FishingReelService();
-        FishingReel testFishingRod = FishingReelService.create(expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
+        FishingRodService fishingRodService = new FishingRodService();
+        FishingRod testFishingRod = FishingReelService.create(expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
 
         // (3)
         int actualId = fishingRodService.getID();
