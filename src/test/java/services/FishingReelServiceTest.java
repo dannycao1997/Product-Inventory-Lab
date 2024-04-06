@@ -20,11 +20,11 @@ public class FishingReelServiceTest {
         FishingReel testFishingReel = FishingReelService.create(expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
 
         // (3)
-        int actualId = fishingReelService.getID();
+        int actualId = fishingReelService.getId();
         String actualName = fishingReelService.getName();
         String actualBrand = fishingReelService.getBrand();
         String actualSport = fishingReelService.getSport();
-        int actualQty = fishingReelService.getQuantity();
+        int actualQty = fishingReelService.getQty();
         float actualPrice = fishingReelService.getPrice();
 
         // (4)
