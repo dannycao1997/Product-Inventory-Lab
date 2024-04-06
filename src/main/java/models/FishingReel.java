@@ -9,8 +9,8 @@ public class FishingReel {
     private float price;
 
     public FishingReel(){
-
     }
+
     public FishingReel(int id, String name, String brand, String sport, int qty, float price) {
         this.id = id;
         this.name = name;
@@ -23,6 +23,7 @@ public class FishingReel {
     public int getId() {
         return id;
     }
+
     public void setId(int id){
         this.id = id;
     }
@@ -30,9 +31,11 @@ public class FishingReel {
     public String getName(){
         return name;
     }
+
     public void setName(String name){
         this.name = name;
     }
+
     public String getBrand() {
         return brand;
     }
@@ -64,5 +67,4 @@ public class FishingReel {
     public void setPrice(float price) {
         this.price = price;
     }
-
 }

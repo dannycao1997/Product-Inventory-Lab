@@ -52,7 +52,6 @@ public class FishingReelServiceTest {
         FishingReel testFishingReel = fishingReelService.create("Reel Deal", "Danny's Fishing Company", "Fishing", 1000, 100.00f);
         FishingReel testFishingReel2 = fishingReelService.create("Reelly Kewl Reel", "Dick's Sporting Goods", "Fishing", 100, 50.00f);
 
-
         FishingReel[] expected = {testFishingReel, testFishingReel2};
 
         FishingReel[] actual = fishingReelService.findAll();

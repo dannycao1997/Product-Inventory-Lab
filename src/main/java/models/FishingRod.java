@@ -10,6 +10,7 @@ public class FishingRod {
 
     public FishingRod(){
     }
+
     public FishingRod(int id, String name, String brand, String sport, int qty, float price) {
         this.id = id;
         this.name = name;
@@ -22,6 +23,7 @@ public class FishingRod {
     public int getId() {
         return id;
     }
+
     public void setId(int id){
         this.id = id;
     }
