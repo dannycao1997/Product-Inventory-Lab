@@ -20,7 +20,7 @@ public class FishingReel {
         this.price = price;
     }
 
-    public int getID() {
+    public int getId() {
         return id;
     }
     public void setId(int id){

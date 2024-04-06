@@ -5,21 +5,13 @@ import models.FishingRod;
 import java.util.ArrayList;
 
 public class FishingRodService {
-    private static int nextID = 1; // (1)
+    private static int nextId = 1; // (1)
     private ArrayList<FishingRod> inventory = new ArrayList<>(); // (2)
 
     // (1)
-    public FishingRod create(String name, String brand, String sport, int quantity, float price) {
-
-        // (2)
-        FishingRod createdFishingRod = new FishingRod(nextId++, name, brand, sport, quantity, price);
-
-        // (3)
+    public FishingRod create(String name, String brand, String sport, int Qty, float price) {
+        FishingRod createdFishingRod = new FishingRod(nextId++, name, brand, sport, Qty, price);
         inventory.add(createdFishingRod);
-
-        // (4)
         return createdFishingRod;
     }
-
-
 }

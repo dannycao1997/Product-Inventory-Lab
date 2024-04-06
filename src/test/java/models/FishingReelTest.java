@@ -7,34 +7,79 @@ public class FishingReelTest {
     private FishingReel fishingReel;
 
     @Test
+    public void setIdTest(){
+        int expected = 59;
+
+        fishingReel = new FishingReel();
+        fishingReel.setId(expected);
+
+        Assertions.assertEquals(expected, fishingReel.getId());
+    }
+
+    @Test
     public void setNameTest(){
-        //given (1)
         String expected = "5000 Series Titanium Shark Reel";
 
-        //when (2)
         fishingReel = new FishingReel();
         fishingReel.setName(expected);
 
-        //then (3)
         Assertions.assertEquals(expected, fishingReel.getName());
     }
 
-    @Test // (1)
+    @Test
+    public void setBrandTest(){
+        String expected = "Danny's Fishing Company";
+
+        fishingReel = new FishingReel();
+        fishingReel.setBrand(expected);
+
+        Assertions.assertEquals(expected, fishingReel.getBrand());
+    }
+
+    @Test
+    public void setSportTest(){
+        String expected = "Fishing";
+
+        fishingReel = new FishingReel();
+        fishingReel.setSport(expected);
+
+        Assertions.assertEquals(expected, fishingReel.getSport());
+    }
+
+    @Test
+    public void setQtyTest(){
+        int expected = 500;
+
+        fishingReel = new FishingReel();
+        fishingReel.setQty(expected);
+
+        Assertions.assertEquals(expected, fishingReel.getQty());
+    }
+
+    @Test
+    public void setPriceTest(){
+        float expected = 200.00f;
+
+        fishingReel = new FishingReel();
+        fishingReel.setPrice(expected);
+
+        Assertions.assertEquals(expected, fishingReel.getPrice());
+    }
+
+
+    @Test
     public void constructorTest(){
 
-        // (2)
-        int expectedID = 26;
+        int expectedId = 26;
         String expectedName  = "5000 Series Titanium Shark Reel";
         String expectedBrand = "Danny's Fishing Company";
         String expectedSport = "Fishing";
         int expectedQty = 1000;
         float expectedPrice = 200.00f;
 
-        // (3)
-        FishingReel fishingReel = new FishingReel(expectedID, expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
+        FishingReel fishingReel = new FishingReel(expectedId, expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
 
-        // (4)
-        Assertions.assertEquals(expectedID, fishingReel.getID());
+        Assertions.assertEquals(expectedId, fishingReel.getId());
         Assertions.assertEquals(expectedName, fishingReel.getName());
         Assertions.assertEquals(expectedBrand, fishingReel.getBrand());
         Assertions.assertEquals(expectedSport, fishingReel.getSport());

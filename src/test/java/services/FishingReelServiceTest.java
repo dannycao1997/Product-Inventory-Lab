@@ -8,26 +8,23 @@ public class FishingReelServiceTest {
     @Test
     public void createTest() {
 
-        // (1)
+        int expectedId = 25;
         String expectedName = "Reel Deal";
         String expectedBrand = "Danny's Fishing Company";
         String expectedSport = "Fishing";
         int expectedQty = 1000;
         float expectedPrice = 100.00f;
 
-        // (2)
         FishingReelService fishingReelService = new FishingReelService();
-        FishingReel testFishingReel = FishingReelService.create(expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
+        FishingReel testFishingReel = FishingReelService.create(expectedId,expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
 
-        // (3)
-        int actualId = fishingReelService.getId();
-        String actualName = fishingReelService.getName();
-        String actualBrand = fishingReelService.getBrand();
-        String actualSport = fishingReelService.getSport();
-        int actualQty = fishingReelService.getQty();
-        float actualPrice = fishingReelService.getPrice();
+        int actualId = testFishingReel.getId();
+        String actualName = testFishingReel.getName();
+        String actualBrand = testFishingReel.getBrand();
+        String actualSport = testFishingReel.getSport();
+        int actualQty = testFishingReel.getQty();
+        float actualPrice = testFishingReel.getPrice();
 
-        // (4)
         Assertions.assertEquals(Integer.class.getName(), new Integer(actualId).getClass().getName());
         Assertions.assertEquals(expectedName, actualName);
         Assertions.assertEquals(expectedBrand, actualBrand);
