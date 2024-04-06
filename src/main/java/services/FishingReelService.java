@@ -13,7 +13,7 @@ public class FishingReelService {
         inventory.add(createdFishingReel);
         return createdFishingReel;
     }
-    
+
     //read
     public FishingReel findFishingReel(int id) {
         // should take an int and return an object with that id, if exists
