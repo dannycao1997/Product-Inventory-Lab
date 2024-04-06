@@ -8,7 +8,7 @@ public class FishingReelTest {
 
     @Test
     public void setIdTest(){
-        int expected = 59;
+        int expected = 26;
 
         fishingReel = new FishingReel();
         fishingReel.setId(expected);
@@ -48,7 +48,7 @@ public class FishingReelTest {
 
     @Test
     public void setQtyTest(){
-        int expected = 500;
+        int expected = 1000;
 
         fishingReel = new FishingReel();
         fishingReel.setQty(expected);

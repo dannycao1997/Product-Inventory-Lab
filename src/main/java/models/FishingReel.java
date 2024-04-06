@@ -9,7 +9,7 @@ public class FishingReel {
     private float price;
 
     public FishingReel(){
-        this(26, "5000 Series Titanium Shark Reel", "Danny's Fishing Company", "Fishing", 1000, 200.00f);
+
     }
     public FishingReel(int id, String name, String brand, String sport, int qty, float price) {
         this.id = id;

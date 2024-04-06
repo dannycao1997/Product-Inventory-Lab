@@ -8,7 +8,7 @@ public class FishingReelServiceTest {
     @Test
     public void createTest() {
 
-        int expectedId = 25;
+        int expectedId = 26;
         String expectedName = "Reel Deal";
         String expectedBrand = "Danny's Fishing Company";
         String expectedSport = "Fishing";
@@ -16,7 +16,7 @@ public class FishingReelServiceTest {
         float expectedPrice = 100.00f;
 
         FishingReelService fishingReelService = new FishingReelService();
-        FishingReel testFishingReel = FishingReelService.create(expectedId,expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
+        FishingReel testFishingReel = fishingReelService.create(expectedId, expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
 
         int actualId = testFishingReel.getId();
         String actualName = testFishingReel.getName();
@@ -31,6 +31,17 @@ public class FishingReelServiceTest {
         Assertions.assertEquals(expectedSport, actualSport);
         Assertions.assertEquals(expectedQty, actualQty);
         Assertions.assertEquals(expectedPrice, actualPrice);
+    }
+    @Test
+    public void findFishingReelTest(){
+    }
+
+    @Test
+    public void findAllReelTest(){
+    }
+
+    @Test
+    public void deleteReelTest(){
     }
 }
 

@@ -10,7 +10,7 @@ public class FishingRod {
 
     public FishingRod(){
     }
-    public FishingRod(int Id, String name, String brand, String sport, int qty, float price) {
+    public FishingRod(int id, String name, String brand, String sport, int qty, float price) {
         this.id = id;
         this.name = name;
         this.brand = brand;

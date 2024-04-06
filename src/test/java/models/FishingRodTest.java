@@ -57,7 +57,7 @@ public class FishingRodTest {
 
     @Test
     public void setPriceTest(){
-        float expected = 200.00f;
+        float expected = 150.00f;
 
         fishingRod = new FishingRod();
         fishingRod.setPrice(expected);
@@ -72,7 +72,7 @@ public class FishingRodTest {
         String expectedName  = "Carbon Fiber Surf Rod";
         String expectedBrand = "Danny's Fishing Company";
         String expectedSport = "Fishing";
-        int expectedQty = 5000;
+        int expectedQty = 500;
         float expectedPrice = 150.00f;
 
         FishingRod fishingRod = new FishingRod(expectedId, expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);

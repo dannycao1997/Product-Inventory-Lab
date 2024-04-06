@@ -6,11 +6,11 @@ import models.FishingRod;
 import java.util.ArrayList;
 
 public class FishingReelService {
-    private static int nextId = 1; // (1)
+    private static Integer nextId = 1; // (1)
     private ArrayList<FishingReel> inventory = new ArrayList<>(); // (2)
 
     // (1)
-    public FishingReel create(String name, String brand, String sport, int Qty, float price) {
+    public FishingReel create(int Id, String name, String brand, String sport, int Qty, float price) {
         FishingReel createdFishingReel = new FishingReel(nextId++, name, brand, sport, Qty, price);
         inventory.add(createdFishingReel);
         return createdFishingReel;
@@ -27,12 +27,17 @@ public class FishingReelService {
 
     //read all
     public FishingReel[] findAll() {
-        return inventory.toArray(new FishingReel[inventory.size()]);
-    }
+        FishingReel[] reelarray = new FishingReel[inventory.size()];
+        return inventory.toArray(reelarray);    }
 
     //delete
-    public boolean delete(int id) {
-        // should remove the object with this id from the ArrayList if exits and return true.
-        // Otherwise return false
+    public boolean delete(Integer id) {
+        for (FishingReel fishreel : inventory){
+            if (id.equals(fishreel.getId())){
+                inventory.remove(fishreel);
+                return true;
+            }
+        }
+        return false;
     }
 }

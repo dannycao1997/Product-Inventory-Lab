@@ -12,12 +12,12 @@ public class FishingRodServiceTest {
         int expectedId = 22;
         String expectedName = "Best Fishing Rod Ever";
         String expectedBrand = "Danny's Fishing Company";
-        String expectedSport = "fishing";
+        String expectedSport = "Fishing";
         int expectedQty = 300;
         float expectedPrice = 150.00f;
 
         FishingRodService fishingRodService = new FishingRodService();
-        FishingRod testFishingRod = FishingRodService.create(expectedId, expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
+        FishingRod testFishingRod = fishingRodService.create(expectedId, expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
 
         int actualId = testFishingRod.getId();
         String actualName = testFishingRod.getName();
@@ -32,5 +32,16 @@ public class FishingRodServiceTest {
         Assertions.assertEquals(expectedSport, actualSport);
         Assertions.assertEquals(expectedQty, actualQty);
         Assertions.assertEquals(expectedPrice, actualPrice);
+    }
+    @Test
+    public void findFishingRodTest(){
+    }
+
+    @Test
+    public void findAllRodTest(){
+    }
+
+    @Test
+    public void deleteRodTest(){
     }
 }
