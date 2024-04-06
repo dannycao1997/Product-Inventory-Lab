@@ -8,4 +8,16 @@ public class FishingReel {
     private int size;
     private int qty;
     private float price;
+
+    public FishingReel() {
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
 }
