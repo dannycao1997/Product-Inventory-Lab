@@ -5,6 +5,26 @@ import org.junit.jupiter.api.Test;
 
 public class FishingRodTest {
     private FishingRod fishingRod;
+    @Test
+    public void constructorTest(){
+
+        int expectedId = 99;
+        String expectedName  = "Carbon Fiber Surf Rod";
+        String expectedBrand = "Danny's Fishing Company";
+        String expectedSport = "Fishing";
+        int expectedQty = 500;
+        float expectedPrice = 150.00f;
+
+        FishingRod fishingRod = new FishingRod(expectedId, expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
+
+        Assertions.assertEquals(expectedId, fishingRod.getId());
+        Assertions.assertEquals(expectedName, fishingRod.getName());
+        Assertions.assertEquals(expectedBrand, fishingRod.getBrand());
+        Assertions.assertEquals(expectedSport, fishingRod.getSport());
+        Assertions.assertEquals(expectedQty, fishingRod.getQty());
+        Assertions.assertEquals(expectedPrice, fishingRod.getPrice());
+
+    }
 
     @Test
     public void setIdTest(){
@@ -65,24 +85,4 @@ public class FishingRodTest {
         Assertions.assertEquals(expected, fishingRod.getPrice());
     }
 
-    @Test
-    public void constructorTest(){
-
-        int expectedId = 99;
-        String expectedName  = "Carbon Fiber Surf Rod";
-        String expectedBrand = "Danny's Fishing Company";
-        String expectedSport = "Fishing";
-        int expectedQty = 500;
-        float expectedPrice = 150.00f;
-
-        FishingRod fishingRod = new FishingRod(expectedId, expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
-
-        Assertions.assertEquals(expectedId, fishingRod.getId());
-        Assertions.assertEquals(expectedName, fishingRod.getName());
-        Assertions.assertEquals(expectedBrand, fishingRod.getBrand());
-        Assertions.assertEquals(expectedSport, fishingRod.getSport());
-        Assertions.assertEquals(expectedQty, fishingRod.getQty());
-        Assertions.assertEquals(expectedPrice, fishingRod.getPrice());
-
-    }
 }

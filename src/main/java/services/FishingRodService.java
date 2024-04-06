@@ -8,9 +8,7 @@ import java.util.ArrayList;
 public class FishingRodService {
     private static Integer nextId = 1;
     private ArrayList<FishingRod> inventory = new ArrayList<>();
-
-    // (1)
-    public FishingRod create(int id, String name, String brand, String sport, int Qty, float price) {
+    public FishingRod create(String name, String brand, String sport, int Qty, float price) {
         FishingRod createdFishingRod = new FishingRod(nextId++, name, brand, sport, Qty, price);
         inventory.add(createdFishingRod);
         return createdFishingRod;
@@ -18,7 +16,7 @@ public class FishingRodService {
 
     public FishingRod findFishingRod(int id) {
         for(FishingRod fishrod : inventory){
-            if (id == fishrod.getId()){
+            if (fishrod.getId() == id){
                 return fishrod;
             }
         }
@@ -26,13 +24,12 @@ public class FishingRodService {
     }
 
     public FishingRod[] findAll() {
-        FishingRod[] rodarray = new FishingRod[inventory.size()];
-        return inventory.toArray(rodarray);
+        return inventory.toArray(new FishingRod[0]);
     }
 
     public boolean delete(Integer id) {
         for (FishingRod fishrod : inventory){
-            if (id.equals(fishrod.getId())){
+            if (fishrod.getId() == id){
                 inventory.remove(fishrod);
                 return true;
             }

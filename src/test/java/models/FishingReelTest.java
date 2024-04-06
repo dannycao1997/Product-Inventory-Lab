@@ -5,6 +5,26 @@ import org.junit.jupiter.api.Test;
 
 public class FishingReelTest {
     private FishingReel fishingReel;
+    @Test
+    public void constructorTest(){
+
+        int expectedId = 26;
+        String expectedName  = "5000 Series Titanium Shark Reel";
+        String expectedBrand = "Danny's Fishing Company";
+        String expectedSport = "Fishing";
+        int expectedQty = 1000;
+        float expectedPrice = 200.00f;
+
+        FishingReel fishingReel = new FishingReel(expectedId, expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
+
+        Assertions.assertEquals(expectedId, fishingReel.getId());
+        Assertions.assertEquals(expectedName, fishingReel.getName());
+        Assertions.assertEquals(expectedBrand, fishingReel.getBrand());
+        Assertions.assertEquals(expectedSport, fishingReel.getSport());
+        Assertions.assertEquals(expectedQty, fishingReel.getQty());
+        Assertions.assertEquals(expectedPrice, fishingReel.getPrice());
+
+    }
 
     @Test
     public void setIdTest(){
@@ -64,27 +84,5 @@ public class FishingReelTest {
         fishingReel.setPrice(expected);
 
         Assertions.assertEquals(expected, fishingReel.getPrice());
-    }
-
-
-    @Test
-    public void constructorTest(){
-
-        int expectedId = 26;
-        String expectedName  = "5000 Series Titanium Shark Reel";
-        String expectedBrand = "Danny's Fishing Company";
-        String expectedSport = "Fishing";
-        int expectedQty = 1000;
-        float expectedPrice = 200.00f;
-
-        FishingReel fishingReel = new FishingReel(expectedId, expectedName, expectedBrand, expectedSport, expectedQty, expectedPrice);
-
-        Assertions.assertEquals(expectedId, fishingReel.getId());
-        Assertions.assertEquals(expectedName, fishingReel.getName());
-        Assertions.assertEquals(expectedBrand, fishingReel.getBrand());
-        Assertions.assertEquals(expectedSport, fishingReel.getSport());
-        Assertions.assertEquals(expectedQty, fishingReel.getQty());
-        Assertions.assertEquals(expectedPrice, fishingReel.getPrice());
-
     }
 }
