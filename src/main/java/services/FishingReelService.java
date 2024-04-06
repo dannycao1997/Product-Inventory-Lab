@@ -15,4 +15,24 @@ public class FishingReelService {
         inventory.add(createdFishingReel);
         return createdFishingReel;
     }
+    //read
+    public FishingReel findFishingReel(int id) {
+        for(FishingReel fishreel : inventory){
+            if (id == fishreel.getId()){
+                return fishreel;
+            }
+        }
+        return null;
+    }
+
+    //read all
+    public FishingReel[] findAll() {
+        return inventory.toArray(new FishingReel[inventory.size()]);
+    }
+
+    //delete
+    public boolean delete(int id) {
+        // should remove the object with this id from the ArrayList if exits and return true.
+        // Otherwise return false
+    }
 }
