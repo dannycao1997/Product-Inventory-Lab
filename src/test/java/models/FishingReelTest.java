@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class FishingReelTest {
     private FishingReel fishingReel;
+
     @Test
     public void setNameTest(){
         //given (1)
