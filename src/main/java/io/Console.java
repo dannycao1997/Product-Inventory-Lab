@@ -10,5 +10,5 @@ public class Console {
                 "**************************************************");
     }
     public static void mainMenu() {
-    }
+    } // NEED TO CREATE CODE FOR (CRUD) Create, Read, Update, and Delete with items in inventory
 }
