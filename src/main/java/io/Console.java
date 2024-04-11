@@ -6,7 +6,7 @@ public class Console {
                 "**************************************************\n" +
                 "***           Welcome and Bienvenue            ***\n" +
                 "***                    to                      ***\n" +
-                "***          Fishing Inventory Manager           ***\n" +
+                "***          Fishing Inventory Manager         ***\n" +
                 "**************************************************");
     }
     public static void mainMenu() {
